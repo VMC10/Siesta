@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Siesta Bot Commands</title>
+
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="../index.html">Siesta Bot</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input id="inputCommands" onkeyup="searchCommands()" class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Tìm kiếm" aria-label="Search">
+
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3 sidebar-sticky">
+        <ul class="nav flex-column">
+
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">
+              <span class="align-text-bottom"></span>
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./commands.html">
+              <span class="align-text-bottom"></span>
+              Commands
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./slashcommands.html">
+              <span class="align-text-bottom"></span>
+              Slash Commands
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.com/api/oauth2/authorize?client_id=853525129057402921&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">
+              <span class="align-text-bottom"></span>
+              Invite to server
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/developer.html">
+              <span class="align-text-bottom"></span>
+              Developer
+            </a>
+          </li>
+
+          
+        </ul>
+
+
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      
+
+
+
+   
+      <div class="table-responsive">
+        <table class="table table-striped" id="commandsTable">
+          <thead>
+            <tr>
+              <th scope="col">Commands</th>
+              <th scope="col">Mô tả</th>
+              <th scope="col">Tham số</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>help</td>
+              <td>Xem danh sách lệnh</td>
+              <td>-</td>
+              
+            </tr>
+            <tr>
+              <td>level</td>
+              <td>Xem level của thành viên</td>
+              <td>- or user</td>
+             
+            </tr>
+            <tr>
+              <td>rank</td>
+              <td>Xem rank của thành viên</td>
+              <td>- or user</td>
+             
+            </tr>
+            <tr>
+              <td>bank</td>
+              <td>Kiểm tra số coin trong tài khoản</td>
+              <td>-</td>
+    
+            </tr>
+            <tr>
+              <td>daily</td>
+              <td>Điểm danh nhận coin hằng ngày</td>
+              <td>-</td>
+           
+            </tr>
+            <tr>
+              <td>ck</td>
+              <td>Chuyển coin cho người khác</td>
+              <td>[user][coin]</td>
+             
+            </tr>
+            <tr>
+              <td>ban</td>
+              <td>Cấm thành viên khỏi server</td>
+              <td>user or user-id</td>
+            
+            </tr>
+            <tr>
+              <td>unban</td>
+              <td>Bỏ cấm thành viên khỏi server</td>
+              <td>user-id</td>
+
+            </tr>
+            <tr>
+              <td>kick</td>
+              <td>Đuổi thành viên khỏi server</td>
+              <td>user or user-id</td>
+            
+            </tr>
+            <tr>
+              <td>timeout</td>
+              <td>Đặt thời gian chờ (Cấm trò chuyện và vào kênh thoại)</td>
+              <td>[user][time][reason]</td>
+              
+            </tr>
+            <tr>
+              <td>untimeout</td>
+              <td>Bỏ thời gian chờ thành viên</td>
+              <td>[user][reason]</td>
+           
+            </tr>
+            <tr>
+              <td>translate</td>
+              <td>Dịch ngôn ngữ khác sang tiếng Việt</td>
+              <td>[words]</td>
+             
+            </tr>
+            <tr>
+              <td>ui</td>
+              <td>Xem thông tin của thành viên trong server</td>
+              <td>- or [user]</td>
+
+            </tr>
+            <tr>
+              <td>si</td>
+              <td>Xem thông tin của server</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>at, ah, an</td>
+              <td>Lấy ngẫu nhiên ảnh (top, hot, new tương ứng với lệnh) về chủ đề anime trên reddit</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>ht, hh, hn</td>
+              <td>Lấy ngẫu nhiên ảnh (top, hot, new tương ứng với lệnh) về chủ đề hentai trên reddit (18+)</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>ping</td>
+              <td>Xem ping của bot</td>
+              <td>-</td>
+
+            </tr>
+
+
+            <tr>
+              <td>stats</td>
+              <td>Xem thông tin của bot</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>uptime</td>
+              <td>Xem thời gian hoạt động của bot</td>
+              <td>-</td>
+
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="../js/vmc.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+  </body>
+</html>

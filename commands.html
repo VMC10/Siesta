@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siesta</title>
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav__container">
+      <a href="index.html">
+        <h4>Siesta</h4>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="slashcommands.html">Slash Commands</a></li>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="invite.html">Invite</a></li>
+      </ul>
+      <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+      <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+  </nav>
+
+
+  <section class="commands">
+    <div class="search-box">
+      <button class="btn-search"><i class="uil uil-search"></i></button>
+      <input type="text" class="input-search" placeholder="Nhập để tìm kiếm..." id="inputCommands"
+        onkeyup="searchCommands()">
+    </div>
+    <div class="container commands__container">
+      <div class="table-responsive">
+        <table class="table table-striped" id="commandsTable">
+          <thead>
+            <tr>
+              <th scope="col">Commands</th>
+              <th scope="col">Mô tả</th>
+              <th scope="col">Tham số</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>help</td>
+              <td>Xem danh sách lệnh</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>level</td>
+              <td>Xem level của thành viên</td>
+              <td>- or user</td>
+
+            </tr>
+            <tr>
+              <td>rank</td>
+              <td>Xem rank của thành viên</td>
+              <td>- or user</td>
+
+            </tr>
+            <tr>
+              <td>bank</td>
+              <td>Kiểm tra số coin trong tài khoản</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>daily</td>
+              <td>Điểm danh nhận coin hằng ngày</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>ck</td>
+              <td>Chuyển coin cho người khác</td>
+              <td>[user][coin]</td>
+
+            </tr>
+            <tr>
+              <td>ban</td>
+              <td>Cấm thành viên khỏi server</td>
+              <td>user or user-id</td>
+
+            </tr>
+            <tr>
+              <td>unban</td>
+              <td>Bỏ cấm thành viên khỏi server</td>
+              <td>user-id</td>
+
+            </tr>
+            <tr>
+              <td>kick</td>
+              <td>Đuổi thành viên khỏi server</td>
+              <td>user or user-id</td>
+
+            </tr>
+            <tr>
+              <td>timeout</td>
+              <td>Đặt thời gian chờ (Cấm trò chuyện và vào kênh thoại)</td>
+              <td>[user][time][reason]</td>
+
+            </tr>
+            <tr>
+              <td>untimeout</td>
+              <td>Bỏ thời gian chờ thành viên</td>
+              <td>[user][reason]</td>
+
+            </tr>
+            <tr>
+              <td>translate</td>
+              <td>Dịch ngôn ngữ khác sang tiếng Việt</td>
+              <td>[words]</td>
+
+            </tr>
+            <tr>
+              <td>ui</td>
+              <td>Xem thông tin của thành viên trong server</td>
+              <td>- or [user]</td>
+
+            </tr>
+            <tr>
+              <td>si</td>
+              <td>Xem thông tin của server</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>at, ah, an</td>
+              <td>Lấy ngẫu nhiên ảnh (top, hot, new tương ứng với lệnh) về chủ đề anime trên reddit</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>ht, hh, hn</td>
+              <td>Lấy ngẫu nhiên ảnh (top, hot, new tương ứng với lệnh) về chủ đề hentai trên reddit (18+)</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>ping</td>
+              <td>Xem ping của bot</td>
+              <td>-</td>
+
+            </tr>
+
+
+            <tr>
+              <td>stats</td>
+              <td>Xem thông tin của bot</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>uptime</td>
+              <td>Xem thời gian hoạt động của bot</td>
+              <td>-</td>
+
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="./js/vmc.js"></script>
+
+</body>
+
+</html>

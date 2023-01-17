@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siesta</title>
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav__container">
+      <a href="index.html">
+        <h4>Siesta</h4>
+      </a>
+      <ul class="nav__menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="slashcommands.html">Slash Commands</a></li>
+        <li><a href="commands.html">Commands</a></li>
+        <li><a href="invite.html">Invite</a></li>
+      </ul>
+      <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+      <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+    </div>
+  </nav>
+
+  <section class="slashcommands">
+    <div class="search-box">
+      <button class="btn-search"><i class="uil uil-search"></i></button>
+      <input type="text" class="input-search" placeholder="Nhập để tìm kiếm..." id="inputSlashCommands"
+        onkeyup="searchSlashCommands()">
+    </div>
+    <div class="container slashcommands__container">
+      <div class="table-responsive">
+        <table class="table table-striped" id="slashcommandsTable">
+          <thead>
+            <tr>
+              <th scope="col">Commands</th>
+              <th scope="col">Mô tả</th>
+              <th scope="col">Tham số</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>/help-siesta</td>
+              <td>Xem danh sách lệnh</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/hako user</td>
+              <td>Xem thông tin của thành viên trên website hako</td>
+              <td>[link] or [id]</td>
+
+            </tr>
+            <tr>
+              <td>/hako ln</td>
+              <td>Xem thông tin của truyện dịch trên website hako</td>
+              <td>[link] or [id]</td>
+
+            </tr>
+            <tr>
+              <td>/hako popular</td>
+              <td>Xem những truyện nổi bật trong ngày trên website hako</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/hako most-followed</td>
+              <td>Xem những truyện có nhiều follow nhất trên website hako</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/check-db</td>
+              <td>Kiểm tra thông tin đã được lưu trong database</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/db add-general-channel</td>
+              <td>Thêm ID của kênh chat chung vào trong database</td>
+              <td>[text-channel]</td>
+
+            </tr>
+            <tr>
+              <td>/db add-welcome-channel</td>
+              <td>Thêm ID của kênh chào mừng vào trong datase</td>
+              <td>[text-channel]</td>
+
+            </tr>
+            <tr>
+              <td>/db add-goodbye-channel</td>
+              <td>Thêm ID của kênh tạm biệt vào trong database</td>
+              <td>[text-channel]</td>
+
+            </tr>
+
+            <tr>
+              <td>/db add-log-mod</td>
+              <td>Thêm ID của kênh log mod vào trong database</td>
+              <td>[text-channel]</td>
+
+            </tr>
+
+            <tr>
+              <td>/db add-log-channel</td>
+              <td>Thêm ID của kênh log thành viên vào trong database</td>
+              <td>[text-channel]</td>
+
+            </tr>
+
+            <tr>
+              <td>/db add-log-ghost-ping-channel</td>
+              <td>Thêm ID của kênh log ghost ping vào trong database</td>
+              <td>[text-channel]</td>
+
+            </tr>
+
+            <tr>
+              <td>/db add-level-channel</td>
+              <td>Thêm ID của kênh level up vào trong database</td>
+              <td>[text-channel]</td>
+
+            </tr>
+
+            <tr>
+              <td>/db remove-general-channel</td>
+              <td>Xóa ID của kênh chat chung khỏi trong database</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/db remove-welcome-channel</td>
+              <td>Xóa ID của kênh chào mừng khỏi trong datase</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/db remove-goodbye-channel</td>
+              <td>Xóa ID của kênh tạm biệt khỏi trong database</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>/db remove-log-mod</td>
+              <td>Xóa ID của kênh log mod khỏi trong database</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>/db remove-log-channel</td>
+              <td>Xóa ID của kênh log thành viên khỏi trong database</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>/db remove-log-ghost-ping-channel</td>
+              <td>Xóa ID của kênh log ghost ping khỏi trong database</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>/db remove-level-channel</td>
+              <td>Thêm ID của kênh level up vào trong database</td>
+              <td>-</td>
+
+            </tr>
+
+
+            <tr>
+              <td>/anti-raid</td>
+              <td>Tạm thời ngăn các thành viên khác vào trong server khi bị raid</td>
+              <td>[mode]</td>
+
+            </tr>
+            <tr>
+              <td>/quotes love</td>
+              <td>Danh ngôn tình yêu</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/quotes friendship</td>
+              <td>Danh ngôn tình bạn</td>
+              <td>-</td>
+
+            </tr>
+            <tr>
+              <td>/nfc_card</td>
+              <td>Tạo thẻ NFC đơn giản với hình của Siesta</td>
+              <td>[text][url]</td>
+
+            </tr>
+            <tr>
+              <td>/avatar</td>
+              <td>Xem avatar của thành viên</td>
+              <td>-[option] or [user][option]</td>
+
+            </tr>
+            <tr>
+              <td>/user-info</td>
+              <td>Xem thông tin của thành viên trong server</td>
+              <td>-[option] or [user][option]</td>
+
+            </tr>
+            <tr>
+              <td>/server-info</td>
+              <td>Xem thông tin của server</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>/ping</td>
+              <td>Xem ping của bot</td>
+              <td>-</td>
+
+            </tr>
+
+            <tr>
+              <td>/anime</td>
+              <td>Tìm kiếm thông tin của anime trên trang myanimelist</td>
+              <td>[name]</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </section>
+  
+
+  <script src="./js/vmc.js"></script>
+
+</body>
+
+</html>

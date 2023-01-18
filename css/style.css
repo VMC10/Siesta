@@ -295,7 +295,7 @@ footer {
     pointer-events: painted;
 }
 
-.btn-search:focus~.input-search {
+.btn-search:focus~.input-search, .btn-search:active~.input-search {
     width: 300px;
     border-radius: 0px;
     background-color: transparent;
@@ -303,7 +303,7 @@ footer {
     transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
 
-.input-search:focus {
+.input-search:focus, .input-search:active {
     width: 300px;
     border-radius: 0px;
     background-color: transparent;

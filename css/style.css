@@ -36,6 +36,12 @@ body {
     background: var(--color-bg);
 }
 
+.home-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
 .container {
     width: var(--container-width-lg);
     margin: 0 auto;
@@ -95,7 +101,7 @@ img {
     display: inline-block;
     background: var(--color-white);
     color: var(--color-black);
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border: 1px solid transparent;
     font-weight: 500;
     transition: var(--transition);

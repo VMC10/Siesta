@@ -24,6 +24,18 @@ const menu = document.querySelector('.nav__menu');
 const menuBtn = document.querySelector("#open-menu-btn");
 const closeBtn = document.querySelector("#close-menu-btn");
 
+const closeNavButton = ()=> {
+    menu.style.display = "flex";
+    closeBtn.style.display = "none";
+    menuBtn.style.display = "none";
+}
+
+const openNavButton = ()=> {
+    menu.style.display = "none";
+    closeBtn.style.display = "none";
+    menuBtn.style.display = "inline-block";
+}
+
 const openNav = () => {
     menu.style.display = "flex";
     closeBtn.style.display = "inline-block";
@@ -40,6 +52,16 @@ const closeNav = () => {
 
 closeBtn.addEventListener('click', closeNav);
 
+window.addEventListener('resize', ()=> {
+
+    if (window.innerWidth >= 1024){
+        closeNavButton();
+    }
+    else {
+        openNavButton();
+    }
+
+});
 
 function searchCommands()
 {

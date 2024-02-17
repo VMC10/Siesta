@@ -56,7 +56,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>/help-siesta</td>
+              <td>/help</td>
               <td>Xem danh sách lệnh</td>
               <td>-</td>
 
@@ -91,100 +91,112 @@
               <td>-</td>
 
             </tr>
-            <tr>
-              <td>/db add-general-channel</td>
-              <td>Thêm ID của kênh chat chung vào trong database</td>
-              <td>[text-channel]</td>
 
-            </tr>
             <tr>
-              <td>/db add-welcome-channel</td>
+              <td>/db add welcome-channel</td>
               <td>Thêm ID của kênh chào mừng vào trong datase</td>
               <td>[text-channel]</td>
 
             </tr>
             <tr>
-              <td>/db add-goodbye-channel</td>
+              <td>/db add goodbye-channel</td>
               <td>Thêm ID của kênh tạm biệt vào trong database</td>
               <td>[text-channel]</td>
 
             </tr>
 
             <tr>
-              <td>/db add-log-mod</td>
+              <td>/db add log-mod-channel</td>
               <td>Thêm ID của kênh log mod vào trong database</td>
               <td>[text-channel]</td>
 
             </tr>
 
             <tr>
-              <td>/db add-log-channel</td>
+              <td>/db add log-channel</td>
               <td>Thêm ID của kênh log thành viên vào trong database</td>
               <td>[text-channel]</td>
 
             </tr>
 
             <tr>
-              <td>/db add-log-ghost-ping-channel</td>
+              <td>/db add log-ghost-ping-channel</td>
               <td>Thêm ID của kênh log ghost ping vào trong database</td>
               <td>[text-channel]</td>
 
             </tr>
 
             <tr>
-              <td>/db add-level-channel</td>
+              <td>/db add level-channel</td>
               <td>Thêm ID của kênh level up vào trong database</td>
               <td>[text-channel]</td>
 
             </tr>
 
             <tr>
-              <td>/db remove-general-channel</td>
-              <td>Xóa ID của kênh chat chung khỏi trong database</td>
-              <td>-</td>
-
-            </tr>
-            <tr>
-              <td>/db remove-welcome-channel</td>
+              <td>/db remove welcome-channel</td>
               <td>Xóa ID của kênh chào mừng khỏi trong datase</td>
               <td>-</td>
 
             </tr>
             <tr>
-              <td>/db remove-goodbye-channel</td>
+              <td>/db remove goodbye-channel</td>
               <td>Xóa ID của kênh tạm biệt khỏi trong database</td>
               <td>-</td>
 
             </tr>
 
             <tr>
-              <td>/db remove-log-mod</td>
+              <td>/db remove log-mod-channel</td>
               <td>Xóa ID của kênh log mod khỏi trong database</td>
               <td>-</td>
 
             </tr>
 
             <tr>
-              <td>/db remove-log-channel</td>
+              <td>/db remove log-channel</td>
               <td>Xóa ID của kênh log thành viên khỏi trong database</td>
               <td>-</td>
 
             </tr>
 
             <tr>
-              <td>/db remove-log-ghost-ping-channel</td>
+              <td>/db remove log-ghost-ping-channel</td>
               <td>Xóa ID của kênh log ghost ping khỏi trong database</td>
               <td>-</td>
 
             </tr>
 
             <tr>
-              <td>/db remove-level-channel</td>
+              <td>/db remove level-channel</td>
               <td>Thêm ID của kênh level up vào trong database</td>
               <td>-</td>
 
             </tr>
 
+            <tr>
+              <td>/genshin character</td>
+              <td>Xem thông tin nhân vật trong Genshin</td>
+              <td>[name]</td>
+            </tr>
+
+            <tr>
+              <td>/genshin artifact</td>
+              <td>Xem thông tin thánh di vật trong Genshin</td>
+              <td>[name]</td>
+            </tr>
+
+            <tr>
+              <td>/genshin weapon</td>
+              <td>Xem thông tin vũ khí trong Genshin</td>
+              <td>[name]</td>
+            </tr>
+
+            <tr>
+              <td>/prefix</td>
+              <td>Xem hoặc chỉnh prefix của bot</td>
+              <td>- or [set]</td>
+            </tr>
 
             <tr>
               <td>/anti-raid</td>
@@ -217,7 +229,7 @@
 
             </tr>
             <tr>
-              <td>/user-info</td>
+              <td>/user info</td>
               <td>Xem thông tin của thành viên trong server</td>
               <td>-[option] or [user][option]</td>
 
@@ -242,6 +254,43 @@
               <td>[name]</td>
 
             </tr>
+            
+            <tr>
+              <td>/warn add</td>
+              <td>Thêm cảnh cáo với thành viên chỉ định</td>
+              <td>[user][reason]</td>
+            </tr>
+            
+            <tr>
+              <td>/warn list</td>
+              <td>Xem các cảnh cáo của thành viên chỉ định</td>
+              <td>[user]</td>
+            </tr>
+
+            <tr>
+              <td>/warn remove</td>
+              <td>Xóa cảnh cáo của thành viên chỉ định</td>
+              <td>[user][options]</td>
+            </tr>
+
+            <tr>
+              <td>/warn remove-all</td>
+              <td>Xóa toàn bộ cảnh cáo của thành viên chỉ định</td>
+              <td>[user]</td>
+            </tr>
+
+            <tr>
+              <td>/booster</td>
+              <td>Xem các thành viên đã boost cho server</td>
+              <td>-</td>
+            </tr>
+
+            <tr>
+              <td>/find_player</td>
+              <td>Tìm thành viên chơi game cùng</td>
+              <td>[game][players]</td>
+            </tr>
+
           </tbody>
         </table>
       </div>
@@ -249,7 +298,7 @@
 
 
   </section>
-  
+
 
   <script src="./js/vmc.js"></script>
 

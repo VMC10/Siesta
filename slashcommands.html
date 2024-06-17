@@ -59,119 +59,120 @@
               <td>/help</td>
               <td>Xem danh sách lệnh</td>
               <td>-</td>
-
             </tr>
+
             <tr>
               <td>/hako user</td>
               <td>Xem thông tin của thành viên trên website hako</td>
               <td>[link] or [id]</td>
-
             </tr>
+
             <tr>
               <td>/hako ln</td>
               <td>Xem thông tin của truyện dịch trên website hako</td>
               <td>[link] or [id]</td>
-
             </tr>
+
             <tr>
               <td>/hako popular</td>
               <td>Xem những truyện nổi bật trong ngày trên website hako</td>
               <td>-</td>
-
             </tr>
+
             <tr>
               <td>/hako most-followed</td>
               <td>Xem những truyện có nhiều follow nhất trên website hako</td>
               <td>-</td>
-
             </tr>
+
             <tr>
-              <td>/check-db</td>
+              <td>/db check</td>
               <td>Kiểm tra thông tin đã được lưu trong database</td>
               <td>-</td>
-
             </tr>
 
             <tr>
-              <td>/db add welcome-channel</td>
+              <td>/db add join-channel</td>
               <td>Thêm ID của kênh chào mừng vào trong datase</td>
               <td>[text-channel]</td>
-
             </tr>
+
             <tr>
-              <td>/db add goodbye-channel</td>
+              <td>/db add leave-channel</td>
               <td>Thêm ID của kênh tạm biệt vào trong database</td>
               <td>[text-channel]</td>
-
             </tr>
 
             <tr>
               <td>/db add log-mod-channel</td>
               <td>Thêm ID của kênh log mod vào trong database</td>
               <td>[text-channel]</td>
-
             </tr>
 
             <tr>
               <td>/db add log-channel</td>
               <td>Thêm ID của kênh log thành viên vào trong database</td>
               <td>[text-channel]</td>
-
             </tr>
 
             <tr>
               <td>/db add log-ghost-ping-channel</td>
               <td>Thêm ID của kênh log ghost ping vào trong database</td>
               <td>[text-channel]</td>
-
             </tr>
 
             <tr>
-              <td>/db add level-channel</td>
-              <td>Thêm ID của kênh level up vào trong database</td>
+              <td>/db add notification-channel</td>
+              <td>Thêm ID của kênh thông báo vào trong database</td>
               <td>[text-channel]</td>
-
             </tr>
 
             <tr>
-              <td>/db remove welcome-channel</td>
+              <td>/db remove join-channel</td>
               <td>Xóa ID của kênh chào mừng khỏi trong datase</td>
               <td>-</td>
-
             </tr>
+
             <tr>
-              <td>/db remove goodbye-channel</td>
+              <td>/db remove leave-channel</td>
               <td>Xóa ID của kênh tạm biệt khỏi trong database</td>
               <td>-</td>
-
             </tr>
 
             <tr>
               <td>/db remove log-mod-channel</td>
               <td>Xóa ID của kênh log mod khỏi trong database</td>
               <td>-</td>
-
             </tr>
 
             <tr>
               <td>/db remove log-channel</td>
               <td>Xóa ID của kênh log thành viên khỏi trong database</td>
               <td>-</td>
-
             </tr>
 
             <tr>
               <td>/db remove log-ghost-ping-channel</td>
               <td>Xóa ID của kênh log ghost ping khỏi trong database</td>
               <td>-</td>
-
             </tr>
 
             <tr>
-              <td>/db remove level-channel</td>
+              <td>/db remove notification-channel</td>
               <td>Thêm ID của kênh level up vào trong database</td>
               <td>-</td>
+            </tr>
+            
+            <tr>
+              <td>/hsr card</td>
+              <td>Tạo thẻ nhân vật trong HSR</td>
+              <td>[uid]</td>
+            </tr>
 
+            <tr>
+              <td>/hsr player</td>
+              <td>Xem thông tin người chơi trong HSR</td>
+              <td>[uid]</td>
             </tr>
 
             <tr>
@@ -202,57 +203,60 @@
               <td>/anti-raid</td>
               <td>Tạm thời ngăn các thành viên khác vào trong server khi bị raid</td>
               <td>[mode]</td>
-
             </tr>
+
             <tr>
               <td>/quotes love</td>
               <td>Danh ngôn tình yêu</td>
               <td>-</td>
-
             </tr>
+
             <tr>
               <td>/quotes friendship</td>
               <td>Danh ngôn tình bạn</td>
               <td>-</td>
-
             </tr>
+
             <tr>
               <td>/nfc_card</td>
               <td>Tạo thẻ NFC đơn giản với hình của Siesta</td>
               <td>[text][url]</td>
-
             </tr>
+
             <tr>
               <td>/avatar</td>
               <td>Xem avatar của thành viên</td>
               <td>-[option] or [user][option]</td>
-
             </tr>
+
             <tr>
               <td>/user info</td>
               <td>Xem thông tin của thành viên trong server</td>
               <td>-[option] or [user][option]</td>
-
             </tr>
+
             <tr>
               <td>/server-info</td>
               <td>Xem thông tin của server</td>
               <td>-</td>
-
             </tr>
 
             <tr>
               <td>/ping</td>
               <td>Xem ping của bot</td>
               <td>-</td>
-
             </tr>
 
             <tr>
               <td>/anime</td>
               <td>Tìm kiếm thông tin của anime trên trang myanimelist</td>
               <td>[name]</td>
+            </tr>
 
+            <tr>
+              <td>/clear</td>
+              <td>Xóa tin nhắn trong server</td>
+              <td>[amount][user][content][all_channel]</td>
             </tr>
             
             <tr>
@@ -289,6 +293,18 @@
               <td>/find_player</td>
               <td>Tìm thành viên chơi game cùng</td>
               <td>[game][players]</td>
+            </tr>
+
+            <tr>
+              <td>/top</td>
+              <td>Xem bảng xếp hạng kinh nghiệm của thành viên</td>
+              <td>[option][type]</td>
+            </tr>
+
+            <tr>
+              <td>/random-user-voice-channel</td>
+              <td>Chọn ngẫu nhiên thành viên ở trong kênh thoại</td>
+              <td>[channel][mode]</td>
             </tr>
 
           </tbody>
